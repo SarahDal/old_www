@@ -25,6 +25,7 @@ body {
 .subheader-text {
   font-size: 20px;
   font-weight: 700;
+
 }
 
 .body-text {
@@ -46,4 +47,8 @@ body {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+}
+
+code {
+  font-family: monospace;
 }
