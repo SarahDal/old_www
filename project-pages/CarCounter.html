@@ -69,7 +69,7 @@
             - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
           -->
         <div class="main-title">Arduino Car Counter (2019)</div>
-        <div class="body-text">While talking about electronics at work, my colleague metnioned a car counter he’d bought for a large sum of money that never really worked. I had the idea that I could build one myself, from Arduino, and thought I’d give it a try.</div>
+        <div class="body-text">A battery powered car counter on a budget</div>
         <image class="project-header-image" src="../assets/images/CC_housing.jpg">
       </div>
 
@@ -83,7 +83,8 @@
       <div id="project-details">
         <div class="subheader-text">Project Details / Background</div>
         <div class="project-details-content">
-          <div class="body-text">Internet searching found the following projects that I used as inspiration:
+         <div class="body-text"><a href="https://github.com/SarahDal/ArduinoCC">You can find the arduino code and details of the project in this repo</a>.</div>
+          <div class="body-text">While talking about electronics at work, my colleague metnioned a car counter he’d bought for a large sum of money that never really worked. I had the idea that I could build one myself, from Arduino, and thought I’d give it a try. Internet searching found the following projects that I used as inspiration:
             <ul><li><a href="https://www.dbpharrison.com/projects/interactivefloor/arduinopeoplecounter1/">Arudino people counting, using PIR (passive infra-red)</a></li>
             <li><a href="https://hackaday.io/project/4567-traffic-counter-road-tube">Kris Temmermen’s car counter on Hackaday</a></li>
             <li>Plus a one more that is  now gone and only available on internet archive: <a href="https://web.archive.org/web/20141222170015/https://wiki.makercave.org/wiki/Arduino_Vehicle_Traffic_Counter">makercave</a>, and <a href="http://www.old.tomorrow-lab.com/lab16">tomorrow-lab</a> which doesn&#39;t have all the files any more. All of these sites were incredibly useful, both for ideas, inspiration and code help.</li></ul>
@@ -95,29 +96,17 @@
                 <li>MPX5100DP Pressure Sensor</li> 
                 <li>RV 3028 RTC Breakout</li> 
                 <li>SparkFun Level Shifting microSD Breakout</li>
-                <li>DC POWER JACK 2.1MM BARREL-TYPE PCB MOUNT</li>
-                <li>Hook Up Wire Kit, 22 AWG</li>
-                <li>Barrel jack power switch</li>
-                <li>clear plastic tube, 4mm internal diamter</li>
-                <li>SparkFun Level Shifting microSD Breakout</li>
-                <li>4mm internal diameter rubber fuel hose</li>
-                <li>Pelicase 1120</li>
-                <li>4mm double headed bulkhead connector</li>
-                <li>4mm hose T-connector</li>
-                <li>Flash Memory Card, MicroSD Card</li>
-
             </ul>
 
-            <div class="body-text"> The Arduino Pro Mini is a great, compact, low power arduino. However, it doesn't have a USB socket, so power needs to go straight to a pin, carefully, and it needs an FTDI board to convert USB to TTL, or something similar, so it can be programmed. It also has offset A4 (SDA) and A5 (SCL) pins. This is a pain when using a breadboard because they don’t line up  with any holes. The trick is to solder them to A2 and A3 respectively, turning those pins into SDA and SCL.</div>            
+            <div class="body-text">The car counter uses Arduino Pro Mini, a great, compact, low power arduino. However, it doesn't have a USB socket, so power needs to go straight to a pin, carefully, and it needs an FTDI board to convert USB to TTL, or something similar, so it can be programmed. It also has offset A4 (SDA) and A5 (SCL) pins. This is a pain when using a breadboard because they don’t line up  with any holes. The trick is to solder them to A2 and A3 respectively, turning those pins into SDA and SCL.</div>   
+            <div class="body-text">Cars run over a rubber tube on the ground, which is connected to a NXP MPX5100DP pressure sensor.</div>
             <div class="subheader-text">Connecting it up:</div>
             <div class="body-text"> You can connect up the Clock (RV 3028) and the microSD card breakout as normal. The pressure sensor - MPX5100DP - has 6 pins. Pin 1 is notched, and connects to any pin. Pin 2 is ground and pin 3 is VCC. (NXP, who make the pressure sensor, have a surprisingly active and helpful <a href="https://community.nxp.com/">online forum</a>).</div>            
             <div class="body-text"> The pressure sensor works by measuring the pressure in one of the ports, and comparing it to the pressure in the other port. The difference is returned as a voltage between 0 and 5. This can then be converted to Kpa or mb but we don’t really need to know that, so we’ll just use the raw values the pressure sensor returns to us.</div>            
             <div class="subheader-text">Code</div>
             <div class="body-text">I made two code files, one for calibration and one to run. As cars are all pretty much the same weight ("heavy") when compared to a human or an animal, and this let me see what that was. </div>
-            <div class="body-text">The second code waited until the reading from the pressure sensor reached above a certain amount (worked out from the above) above the average of the past twenty readings. Changes in air pressure and temperature could affect the pressure in the tube, so an average is used instead. It measures a data spike, and it waits 400ms between readings. It writes this "hit" to the SD card with date and time.</div>
-            
-            <div class="body-text"><a href="https://github.com/SarahDal/ArduinoCC">You can find the code in this repo</a>.</div>
-          
+            <div class="body-text">The second code waited until the reading from the pressure sensor reached above a certain amount (worked out from the above) above the average of the past twenty readings. Changes in air pressure and temperature could affect the pressure in the tube, so an average is used instead. It measures a data spike, and it waits 400ms between readings. It writes this "hit" to the SD card with date and time.</div>          
+         
             <div class="subheader-text">Housing</div>
             <div class="body-text">Using a pelicase clone and a bulkhead connector, I was able to house everything in a nice waterproof unit. I added solar power with an energiser and a small solar panel.</div>
             

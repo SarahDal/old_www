@@ -1,0 +1,252 @@
+
+
+<!-- 
+  IMPORTANT! 
+  
+  Keep this file unchanged to use as a template for all future project pages. 
+
+  For every new project you add to your portfolio, make a copy of this file in the
+  'project-pages' folder with a name related to the project.
+-->
+
+
+
+<!-- 
+  IMPORTANT! 
+  
+  Keep this file unchanged to use as a template for all future project pages. 
+
+  For every new project you add to your portfolio, make a copy of this file in the
+  'project-pages' folder with a name related to the project.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <!-- 
+      TODO
+
+      Upload your Unemployable (or whatever photo you like) to the assets/images folder
+      and change the name of the image below to match the uploaded one
+
+      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
+
+      This should be the same across all pages.
+     -->
+     <link rel="icon" href="../assets/images/1311.png" />
+     <title>Sarah Dalrymple</title>
+    <meta name="description" content=" ">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+
+		<script defer src="../js/script.js"></script>
+	</head>
+	<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <a class="nav-title-link" href="../index.html">
+        <!-- 
+          TODO - Change the "Portfolio Title" to whatever you want displayed in the top left
+
+          (this should be the same across all pages)
+         -->
+        <span class="nav-title">Sarah Dalrymple</span>
+        <!-- 
+          TODO - Change the email after 'mailto:' to your email address for contact 
+        
+          (this should be the same across all pages)
+        -->
+        <a class="button" href="mailto:dalrymple.sarah@gmail.com">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </a>
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div id="main-content">
+
+      <!-- PROJECT HEADER -->
+      <div id="project-header">
+          <!-- 
+            TODO
+
+            - Change the 'main-title' text to the name of your project
+            - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
+            - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
+          -->
+        <div class="main-title">Livestreaming on a Pi Zero</div>
+        <div class="body-text">Running a livestreaming nature camera on low power.</div>
+        <image class="project-header-image" src="../assets/images/battery-cam-block.jpg">
+      </div>
+
+      <!-- PROJECT DETAILS -->
+      <!-- 
+        TODO
+
+        - Change the 'subheader-text' to whatever header you want for project details
+        - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
+      -->
+      <div id="project-details">
+        <div class="subheader-text">Project Details / Background</div>
+        <div class="project-details-content">
+          <div class="body-text">I was inspired to create a low power, low cost livestreaming nature camera that could be relatively easily deployed around the nature reserve.</div>
+          
+           <div class="subheader-text"> Power Over Ethernet</div>
+          <div class="body-text"> If you have a power source and ethernet connection within 100m, the easiest is to use a Power-over-Ethernet (PoE) connection. Ethernet cable is a much lighter way to run power long distance rather than a mains cable of the same length. </div>
+           <div class="body-text">Hardware:
+          <ul>
+            <li>Huawei E3372 or similar 4g dongle</li>
+            <li>4G data sim</li>
+            <li>Pi + pi camera</li>
+            <li>PoE hat with fan</li>
+            <li>Ethernet cable, max 100m</li>
+            <li>60W ethernet injector</li>
+            <li>Watertight case (eg this electrical enclosure) and connector things</li>
+            <li>Drill and bits, small clear plastic to cover the drilled hole for the camera, plus glue to glue the clear plastic tightly over this hole.</li>
+           </ul>
+         </div>
+           <div class="body-text">This camera uses Power over Ethernet so that you can have a very long power cable that doesn't weigh too much. You could of course use a mains cable, but with PoE you have the option of plugging it into a modem at the mains, or (as I did) use a mobile data dongle and only need a mains supply into the PoE.</div>
+           
+            <div class="body-text">The Pi needs a PoE Hat, get one with a fan. I used a larger enclosure than needed too, to try to help with cooling.</div>
+            <div class="body-text">Drill a hole for the camera and one on the other side for the cable entry. Then cover this hole with plastic, strongly glued (I used epoxy resin), creating a window for the camera to look out of. The Ethernet Cable will fit through a cable gland size PG7 or M12.</div>
+            <div class="body-text">Techincally a 30W PoE injector should work, but it didn't. 60W is fine, but you can't power the Pi and also a USB 4G wifi modem (such as Huawei E5330, which would have been perfect) from the pi as well, so I used a Huawei E3372 with an unlimited data SIM from Vodafone. This worked great, as we have good Vodafone 4G reception here. Your other option is to plug a 4G router with an ethernet port (such as TP-Link Archer modems) into the PoE injector at the mains.</div>
+            <div class="body-text">With a USB modem, you won't be able to connect to the Pi over SSH or VNC on the same network from your computer or phone, which is really important to check for any problems and to safely shut down the Pi if you need to. So I set up remote.it to access the Pi over the internet.  </div>
+           
+           
+          <div class="subheader-text">Powering with Solar and a Battery</div>
+          <div class="body-text">Hardware:
+          <ul>
+           <li>4g Wifi USB Modem, such as a Huawei E5330 or Vodafone R216-Z</li>
+           <li>4G data sim</li>
+           <li><a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/">Pi</a> + <a href="https://www.raspberrypi.org/products/camera-module-v2/">pi camera</a></li>
+           <li><a href="https://www.uugear.com/product/witty-pi-3-realtime-clock-and-power-management-for-raspberry-pi/">Witty pi power management hat</a>
+           <li>12V Lead Acid Battery, 72Ah</li>
+           <li>70W Solar Panel</li>
+           <li>Solar charge controller with built-in USB socket</li>
+           <li>12V 2-core cable to connect the camera to the solar charge controller</li>
+           <li>Large waterproof box to put the battery and electricals in, eg <a href= "https://www.trade-point.co.uk/departments/form-skyda-black-49l-plastic-storage-trunk/3663602763451_TP.prd">Form Skyda 49l</a></li>
+           <li>Watertight case (eg <a href="https://www.screwfix.com/p/schneider-electric-ip66-weatherproof-outdoor-enclosure-164-x-105-x-192mm/576hv">this electrical enclosure</a>) and connector things</li>
+           <li>Drill and bits, small clear plastic to cover the drilled hole for the camera, plus glue to glue the clear plastic tightly over this hole.</li>
+          </ul>
+            </div>
+            <div class="body-text">This version runs on a solar and battery power. I am currently using a large 72Ah lead battery, which should keep the pi powered even through grey days in the middle of winter. Solar power isn't too complicated, but you might want to read around small off-grid solar systems for more detail, particularly about working out how long you can power things for, and how big a solar panel you need.</div>
+
+            <div class="body-text">The solar panel, battery and the thing you are powering (the load) all plug into a solar charge controller, which monitors and controls the power going from the panel into the battery to prevent damage to the battery and to the thing you are powering.</div>
+            <div class="body-text"> The Witty Pi hat lets you safely turn the pi on and off without having to log in, as switching it off without shutting down first can corrupt the SD card. Not only is just presing an off button much easier when you're out in the field trying to set everythign up, the Witty Pi also lets you set a timer for automatically switching on and off every day, so you don't have to leave it running at night when it's too dark to see, saving battery.</div>
+
+            <div class="body-text">Your USB wifi modem can be plugged straight into the charge controller's USB port, but these usb ports don't generally have enough amps to also power the pi. Witty Pi hat solves this problem nicely, as newer version of Witty Pi let you power the Pi directly from 12V. Solder a XH2.54 male connector to one end of your 12V cable to connect it to the Witty Pi, the other end is then put in the solar charge controller Check you have Witty pi 3 v2, else this won't work.(The 12V cable will fit through a cable gland size PG7 or M12.)</div>
+            <div class="body-text">For my solar picam, I glued a camera UV filter over the driled hole for the camera to look out of. I fixed the PiCam to a small piece of plastic, and then used self-adhesive plastic stand-off to hold this. This required tiny bolts for the picam (2mm!), and slightly bigger holes for the stand-offs. </div>
+            <div class="body-text">If you are near the pi, you can access the pi headerless over the same wifi network. But it's a lot easier to be able to access it from elsewhere, so I used <a href="https://www.remote.it/">remote.it</a> to access over the internet.  </div>
+            <div class="body-text">I also used a smaller enclosure (Schneider 138x93x72mm) that the pi just fits into. I had to arrange it carefully because the off switch of the Witty Pi kept pressing against the wall. It looks great though! </div>
+            <div class="body-text"> </div>
+            
+            
+          <div class="subheader-text">The Streaming</div>
+          
+          <div class="body-text">For the streaming itself, you need <a href="https://datarhei.github.io/restreamer/">Restreamer</a> which runs in Docker. <a href="https://nestboxtech.blogspot.com/2020/01/restreamer-live-stream-ip-camera-easy.html">Nestbox Tech has a brilliant guide to setting up docker</a> on the Pi and getting started with Restreamer - it's a lot easier than I thought it would be, and it's easy to find help on <a href="https://github.com/datarhei/restreamer/issues">Restreamer's github page</a>. </div>
+          
+          <div class="body-text">Youtube turned out to be a poor way to stream this. Every new stream on Youtube gets a different URL, so it's difficult to embed or point people at a live stream that regularly stops and starts. So instead, I used <a href="https://www.twitch.tv/">Twitch</a>, this is a streaming service aimed at gamers, but is very easy to <a href="https://dev.twitch.tv/docs/embed">embed with a simple iFrame</a> or just create a channel on Twitch itself. </div>
+          <div class="body-text">You can then set up a Docker command that runs Restreamer and your stream, and add it to a Crontab job to run every day. To run automatically without having to start and stop the stream on Restreamer's web gui, use the environment variable RS_INPUTSTREAM and RS_OUTPUTSTREAM. For example, this is the line I use to start my stream each day: </div>
+          <div class="body-text"><code>
+                docker run -d --restart always --name restreamer
+                -e "RS_USERNAME=user" -e "RS_PASSWORD=password"
+                -e "RS_MODE=RASPICAM" -e "RS_RASPICAM_BITRATE=6400000"
+                -e "RS_RASPICAM_VFLIP=true" -e "RS_RASPICAM_WIDTH=854" -e "RS_RASPICAM_HEIGHT=480"
+                -p 8080:8080 -e "RS_INPUTSTREAM=rtmp://127.0.0.1/live/raspicam.stream"
+                -e "RS_OUTPUTSTREAM=rtmp://lhr03.contribute.live-video.net/app/[streamkey]"
+                -v /opt/vc:/opt/vc --privileged datarhei/restreamer-armv7l:latest
+                </code>
+          </div>
+          <div class="body-text">Data and mobile signal - Start with a low bitrate and increase it until you have a good pay off between a smooth stream, and one where you can actually make out what the image is. In my example above, the RS_RASPICAM_BITRATE is 6400000, or 640 kbps. 640 kbps = 0.288 gb per hour, or 3.5gb for a 12 hour stream.  </div>
+          
+        </div>
+      </div>
+
+      <!-- IMAGE GALLERY -->
+      <div id="project-gallery">
+        <!-- TODO - Change the 'subheader-text' to whatever you want the Gallery section header to say -->
+        <div class="subheader-text">Image Gallery</div>
+        <div class="project-gallery-content">
+            <!-- 
+              TODO
+
+              This is where the images in the gallery live. Here's a simple gallery image for you to copy:
+
+              Full Width Image:
+
+                <div class="gallery-image-container">
+                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
+                  <span class="image-caption">IMAGE_CAPTION</span>
+                </div>
+
+              Half Width Image: 
+
+                <div class="gallery-image-container half-width">
+                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
+                  <span class="image-caption">IMAGE_CAPTION</span>
+                </div>
+
+              - To add an image to the this area, copy one of the above, paste it below this comment, and change the following:
+                  - IMAGE_NAME: the name of the image file in assets/images
+                  - IMAGE_CAPTION: to the caption of the image
+            -->
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/battery-cam-block.jpg" class="gallery-image">
+              <span class="image-caption">Solar Cam in a breezeblock</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/PoePiCam.jpg" class="gallery-image">
+              <span class="image-caption">The insides of the PoE-powered Camera</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/battery-cam-int.jpg" class="gallery-image">
+              <span class="image-caption">Inside the Solar Powered camera</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/battery-cam-1.jpg" class="gallery-image">
+              <span class="image-caption">The lovely Schneider Enclosure with a UV filter</span>
+            </div>
+            </div>
+            <div class="gallery-image-container">
+              <img src="../assets/images/battery-sunset.jpg" class="gallery-image">
+              <span class="image-caption">Solar cam deployed on the beach. The large 12V battery is in a water tight plastic tub</span>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+      <!-- 
+        TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
+
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://ecoevo.social/">
+        <image src="../assets/icons/Mast.svg" class="footer-icon"/>
+      </a>
+      <!-- 
+        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://www.flickr.com/photos/tigerweet/">
+        <image src="../assets/icons/flickr.svg" class="footer-icon"/>
+      </a>
+      <!-- 
+        TODO - Change the email after "mailto" to your contact email 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" href="mailto:dalrymple.sarah@gmail.com">
+        <image src="../assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+    </div>
+
+	</body>
+</html>
