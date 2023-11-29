@@ -1,0 +1,220 @@
+
+
+<!-- 
+  IMPORTANT! 
+  
+  Keep this file unchanged to use as a template for all future project pages. 
+
+  For every new project you add to your portfolio, make a copy of this file in the
+  'project-pages' folder with a name related to the project.
+-->
+
+
+
+<!-- 
+  IMPORTANT! 
+  
+  Keep this file unchanged to use as a template for all future project pages. 
+
+  For every new project you add to your portfolio, make a copy of this file in the
+  'project-pages' folder with a name related to the project.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <!-- 
+      TODO
+
+      Upload your Unemployable (or whatever photo you like) to the assets/images folder
+      and change the name of the image below to match the uploaded one
+
+      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
+
+      This should be the same across all pages.
+     -->
+     <link rel="icon" href="../assets/images/1311.png" />
+     <title>Sarah Dalrymple</title>
+    <meta name="description" content=" ">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+
+		<script defer src="../js/script.js"></script>
+	</head>
+	<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <a class="nav-title-link" href="../index.html">
+        <!-- 
+          TODO - Change the "Portfolio Title" to whatever you want displayed in the top left
+
+          (this should be the same across all pages)
+         -->
+        <span class="nav-title">Sarah Dalrymple</span>
+        <!-- 
+          TODO - Change the email after 'mailto:' to your email address for contact 
+        
+          (this should be the same across all pages)
+        -->
+        <a class="button" href="mailto:dalrymple.sarah@gmail.com">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </a>
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div id="main-content">
+
+      <!-- PROJECT HEADER -->
+      <div id="project-header">
+          <!-- 
+            TODO
+
+            - Change the 'main-title' text to the name of your project
+            - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
+            - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
+          -->
+        <div class="main-title">Home Assistant</div>
+        <div class="body-text">Home Assistant intergrations and installations</div>
+        <image class="project-header-image" src="../assets/images/desktop.jpeg">
+      </div>
+
+      <!-- PROJECT DETAILS -->
+      <!-- 
+        TODO
+
+        - Change the 'subheader-text' to whatever header you want for project details
+        - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
+      -->
+      <div id="project-details">
+        <div class="subheader-text">Project Details / Background</div>
+
+          <div class="body-text">Home Assistant runs on a Raspberry Pi and can control most modern Smart Home devices, plus a whole load more you can make yourself.</div>
+        
+          <div class="body-text">I started off using <a href="https://esphome.io/">ESPHome</a> to control ESP32s with simple temperature and humidity monitors. They send their data using MQTT over bluetooth. From there, I hacked  an <a href="https://style.oversubstance.net/2021/08/diy-use-an-ikea-vindriktning-air-quality-sensor-in-home-assistant-with-esphome/">IKEA VINDRIKTNING </a> air quality monitor; now I can see how the air quality changes when cooking or using the open fire.</div>
+        
+          <div class="body-text">
+          By adding a <a href="https://www.home-assistant.io/integrations/zha/">Zigbee stick</a>, I can now control the huge range of smart home devices that communicate over a Zigbee mesh.</div>
+       
+        <div class="subheader-text">Where is the Cat?</div>
+
+        <div class="project-gallery-content">
+          <div class="gallery-image-container">
+            <img src="../assets/images/fury.jpg" class="gallery-image">
+            <span class="image-caption">Fury and his geotag</span>
+          </div>
+        </div>
+          <div class="body-text">My blind cat, Fury, loves exploring the garden. He shouldn't be able to get out, as the fence is too high for him to jump, but what if someone leaves the gate open?</div>
+          <div class="body-text">He has a GPS tag on his collar (<a href="https://tractive.com">a Tractive device</a>) It intergrates nicely into Home Assistant, allowing me to set an alarm if it detects he is no longer within range - i.e., he's escaped. This means I don't need to constantly watch him when he's playing out.
+          </div> 
+            <div class="body-text">It can also track my watch.. The antennae aren't great and they often seem to "flicker" position between rooms, but it is useful if I want to know where he is</div>
+
+
+            <div class="project-gallery-content">
+              <div class="gallery-image-container">
+                <img src="../assets/images/tracking.png" class="gallery-image">
+                <span class="image-caption">Location History of me and the cat from the Home Assistant dash</span>
+              </div>
+            </div>
+
+        <div class="subheader-text">The Sensor Dashboard</div>
+        <div class="project-gallery-content">
+        <div class="gallery-image-container half-width">
+          <img src="../assets/images/HAdash.JPG" class="gallery-image">
+          <span class="image-caption">Basic Home Assistant dashboard</span>
+        </div>
+
+        </div>
+
+          <div class="body-text">
+            Data from all of these sensors can be displayed on a custom dashboard, a pretty collection of graphs and figures plus buttons, usually displayed on a tablet or screen. This was a bit boring, so I set about creating a physical dashboard using as vintage components as I could.
+          </div>
+          <div class="body-text">
+          Current Temperature and Air Quality can be displayed on old school 7-segment displays. There are two chunky LEDs, showing if the hot water in the tank is hot enough for a shower or not. Currently, a small OLED tells me which room the cat is in, using the brilliant <a href="https://espresense.com/">ESPresense</a>, which runs on ESP32, can handles sensors and tracks BLE devices for you.
+          </div>
+          <div class="project-gallery-content">
+          <div class="gallery-image-container half-width">
+            <img src="../assets/images/dashmark1.jpg" class="gallery-image">
+            <span class="image-caption">Retro sensor display board v1</span>
+          </div>
+
+          <div class="gallery-image-container half-width">
+            <img src="../assets/images/dash1.jpg" class="gallery-image">
+            <span class="image-caption">rear of the sensor board v2</span>
+          </div>
+          <div class="gallery-image-container">
+            <img src="../assets/images/dash2.jpeg" class="gallery-image">
+            <span class="image-caption">rear of the sensor board v2, I've added a buzzer that buzzes when Fury leaves the area</span>
+          </div>
+        </div>
+
+
+
+      <!-- IMAGE GALLERY -->
+      <div id="project-gallery">
+        <!-- TODO - Change the 'subheader-text' to whatever you want the Gallery section header to say -->
+        <!-- <div class="subheader-text">Image Gallery</div>
+        <div class="project-gallery-content"> -->
+            <!-- 
+              TODO
+
+              This is where the images in the gallery live. Here's a simple gallery image for you to copy:
+
+              Full Width Image:
+
+                <div class="gallery-image-container">
+                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
+                  <span class="image-caption">IMAGE_CAPTION</span>
+                </div>
+
+              Half Width Image: 
+
+                <div class="gallery-image-container half-width">
+                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
+                  <span class="image-caption">IMAGE_CAPTION</span>
+                </div>
+
+              - To add an image to the this area, copy one of the above, paste it below this comment, and change the following:
+                  - IMAGE_NAME: the name of the image file in assets/images
+                  - IMAGE_CAPTION: to the caption of the image
+            -->
+
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+      <!-- 
+        TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
+
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://ecoevo.social/">
+        <image src="../assets/icons/Mast.svg" class="footer-icon"/>
+      </a>
+      <!-- 
+        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://www.flickr.com/photos/tigerweet/">
+        <image src="../assets/icons/flickr.svg" class="footer-icon"/>
+      </a>
+      <!-- 
+        TODO - Change the email after "mailto" to your contact email 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" href="mailto:dalrymple.sarah@gmail.com">
+        <image src="../assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+    </div>
+
+	</body>
+</html>
