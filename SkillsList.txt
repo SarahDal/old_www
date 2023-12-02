@@ -1,0 +1,41 @@
+Hi! I'm Sarah Dalrymple, an experienced coastal ecologist with a sideline in electronics and coding. I'm passionate about two things: Large gulls, and applying modern tech to solve conservation problems. 
+
+Most notably for 6 years I managed a suite of nature reserves, including one which held what was once the largest large gull colony in Europe. In a sorry state by 2015, through hard work I halted the rapid decline and hopefully turned this breeding colony around.
+
+ 
+
+
+# SKILLS
+## Ecology & Conservation
+### Expert understanding of North West European Coastal Ecology
+*  Specialist knowledge of the seabirds of the North Atlantic;
+*  Extensive experience of working within the UK and EU conservation regulations and UK wildlife law;
+
+### Practical skills
+*  Digging holes, building fences, mending fences, unblocking sewers, running electric fencing, wiring 12V solar systems, building paths, strimming scrub, securing sites, rolling bracken, off-roading pickups, Landies and Quad bikes: I have nearly 15 years of practical conservation skills;
+*  Adaptable, self-reliant and great in a team, proven by succesful working in remote and island locations;
+*  Tickets held: LANTRA Brushcutter & Trimmer, LANTRA Safe use of Pesticides and LANTRA Pesticides - Boom Sprayer;
+
+
+## Geographical
+### GIS
+*  PostGrad Cert in GIS from University of Leeds;
+*  Broad knowledge of spatial analysis and visualisation;
+*  Working primarily with QGIS, GDAL and the OSGeo suite, but also working knowledge of ESRI systems
+
+### UAV
+*  Mavic Drone flying since 2016;
+*  UAV lead at Cumbria Wildlife Trust;
+*  Mapping and surveying, pioneering counting seabird colonies by drone (see Dalrymple (2022));
+(*  Certificate of Competancy obtained 2024);
+
+## Coding
+- Python, MySql, Arduino, HTML, CSS, PHP and JavaScript to varying degrees;
+- Code databases and websites, use GitHub, comfortable with the CLI;
+
+## Electronics
+- Low voltage enthusiast;
+- Small board computers (RPi and others);
+- Building sensor systems with ESP32 and Arduino;
+- Using them all to solve problems and develop new solutions;
+
