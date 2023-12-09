@@ -64,10 +64,11 @@
     <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
     <script type="text/javascript">
       new Twitch.Embed("twitch-embed", {
-        width: 50%,
-        height: 50%,
+        width: 1000
         channel: "sarahdal99",
 	layout: video,
+	autoplay: true,
+	allowfullscreen: true,
         // Only needed if this page is going to be embedded on other websites
         //parent: ["embed.example.com", "othersite.example.com"]
       });
